@@ -4,8 +4,8 @@ public class HelloWorld
 {
     public static void Main(string[] args)
     {
+        // -------------------- Try Block -----------------------------
         try{
-            
             Console.WriteLine ("Enter the First Number: ");
             int num1 = Convert.ToInt32(Console.ReadLine());
         
@@ -15,6 +15,9 @@ public class HelloWorld
             int result = num1/num2;
             Console.WriteLine ("Result is: " + result);
         }
+
+        // ------------------ Catch Blocks ----------------------------
+        
         catch(FormatException e){
             Console.WriteLine ("Enter NUMBERS Only !!!");
         }
@@ -24,6 +27,9 @@ public class HelloWorld
         catch(Exception e){
             Console.WriteLine ("Something went Wrong !!");
         }
+
+    // -------------------------- Finally Block -----------------------
+        
         finally{
             Console.WriteLine ("Thankyou the program is now ended !!");
         }
