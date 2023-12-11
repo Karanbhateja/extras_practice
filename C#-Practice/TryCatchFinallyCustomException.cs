@@ -1,7 +1,18 @@
 using System;
 
+public class invalidAgeException:Exception{
+    public invalidAgeException(string message):base(message){}
+}
+
 public class HelloWorld
 {
+    
+    public static void validateage(int age){
+        if(age<18){
+            throw new invalidAgeException("Sorry!! You are Underage");
+        }
+    }
+    
     public static void Main(string[] args)
     {
         // -------------------- Try Block -----------------------------
@@ -14,6 +25,8 @@ public class HelloWorld
             
             int result = num1/num2;
             Console.WriteLine ("Result is: " + result);
+            
+            validateage(12);
         }
 
         // ------------------ Catch Blocks ----------------------------
@@ -23,6 +36,9 @@ public class HelloWorld
         }
         catch(DivideByZeroException e){
             Console.WriteLine ("You cannot divide by Zero !!");
+        }
+        catch(invalidAgeException e){
+            Console.WriteLine(e);
         }
         catch(Exception e){
             Console.WriteLine ("Something went Wrong !!");
