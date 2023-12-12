@@ -13,7 +13,7 @@ public class LoginForm:Form
     
     public void LoginForm_Load(Object Sender, EventArgs e){
         
-        label l1 - new label();
+        Label l1 - new Label();
         l1.text= "Username";
         l1.Location - new Point(200,50);
         l1.autosize = true;
@@ -24,7 +24,7 @@ public class LoginForm:Form
         t1.autosize = true;
         this.Controls.add(t1);
         
-        label l2 - new label();
+        Label l2 - new Label();
         l2.text= "Password";
         l2.Location - new Point(200,70);
         l2.autosize = true;
