@@ -58,7 +58,7 @@ public class LoginForm:Form
                 MessageBox.Show("You have used all the Login Attempts!");
             }
             else{
-                MessageBox.Show(LoginAttempt+ "Attempts Left")
+                MessageBox.Show(LoginAttempt+ " Attempts Left");
             }
         }
     }
